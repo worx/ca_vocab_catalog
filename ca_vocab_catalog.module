@@ -1,0 +1,45 @@
+<?php
+
+include_once('ca_vocab_catalog.features.inc');
+
+function ca_vocab_catalog_form_alter($form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'product_node_form':
+        array_unshift($form['#validate'], 'ca_vocab_catalog_validate');
+      break;
+  }
+}
+
+function ca_vocab_catalog_validate($form, &$form_state) {
+  $vid = db_result(db_query("SELECT vid FROM {vocabulary} WHERE module = 'features_ca_vocab_catalog_catalog'"));
+  $taxonomy = $form_state['values']['taxonomy'];
+  if (array_key_exists($vid, $taxonomy)) {
+    foreach ($taxonomy[$vid] as $key => $value) {
+      $parents = taxonomy_get_parents_all($key);
+      foreach ($parents as $key => $value) {
+        $term = $value->tid;
+        if (!array_key_exists($term, $taxonomy[$vid])) {
+          array_unshift($form_state['values']['taxonomy'][$vid], $term);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implementation of hook_ctools_render_alter($info, $page, $args, $contexts, $task, $subtask).
+ */
+function ca_vocab_catalog_ctools_render_alter($info, $page, $args, $contexts, $task, $subtask){
+  if ($subtask['name'] == 'ca_vocab_catalog_catalog_list' || $task['name'] == 'node_view' || $task['name'] == 'term_view') {
+    drupal_add_css(drupal_get_path('module', 'ca_vocab_catalog') . "/css/ca_vocab_catalog.css");
+  }
+}
+
+/**
+ * Implementation of hook_views_pre_render().
+ */
+function ca_vocab_catalog_views_pre_render(&$view) {
+  if ($view->name == 'ca_vocab_catalog') {
+    drupal_add_css(drupal_get_path('module', 'ca_vocab_catalog') . "/css/ca_vocab_catalog.css");
+  }
+}

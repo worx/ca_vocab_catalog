@@ -1,0 +1,17 @@
+/* CA Vocab Catalog CSS */
+  /* Template One */
+  #ca-vocab-catalog-template-one .panel-col-first {width: 200px;}
+  #ca-vocab-catalog-template-one .panel-col-last {width: 700px;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-2 .view-display-id-panel_pane_2 .views-view-grid tr td {width: 33%; text-align: center; vertical-align: bottom;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-2 .view-display-id-panel_pane_2 .views-view-grid label {font-weight: bold; display: inline;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-1 .view-display-id-panel_pane_1 .views-view-grid tr td {width: 33%; text-align: center; vertical-align: bottom;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-1 .view-display-id-panel_pane_1 .views-view-grid label {font-weight: bold; display: inline;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-field-image-cache-fid {float: left; margin-right: 10px;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-field-image-cache-fid-1 {float: left; clear: left; margin-right: 10px; width: 200px;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-field-image-cache-fid-1 .field-item {float: left; margin-right: 5px;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-sell-price {text-align: right;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-sell-price label {font-weight: bold;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-addtocartlink {text-align: right;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-addtocartlink #edit-qty-wrapper label {display: inline;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-addtocartlink .node-add-to-cart {margin: 0;}
+  #ca-vocab-catalog-template-one .pane-ca-vocab-catalog-panel-pane-3 .view-display-id-panel_pane_3 .views-field-addtocartlink .attributes label {display: inline;}
